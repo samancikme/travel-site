@@ -22,6 +22,9 @@ const Header = () => {
   console.log(selectedLang)
   console.log(langData)
 
+
+  
+
   return (
     <div className='flex items-center h-[100px] border-[1px] justify-between shadow-md rounded-md p-[10px] gap-1 bg-gray-700 border-gray-600'>
       <Container className='flex justify-between items-center'>
