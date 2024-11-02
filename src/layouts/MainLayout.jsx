@@ -15,20 +15,19 @@ const MainLayout = () => {
   useEffect(() => {
     dispatch(getAllDestData(`${baseUrl}/destinations`))
     dispatch(getAllTourData(`${baseUrl}/offers`))
- },[])
+  }, [])
   return (
-    <div className=' h-[100vh ] relative'>
+    <div className=' h-[100vh ] relative font-mont'>
       <div className=' bg-cover bg-center'>
-         <div className=' top-0 left-0 right-0 opacity-30 '>
-          <Header/>
-         </div>
-         <Outlet/>
-      </div>
-
-        <div className={`max-w-[250px]  duration-500 min-w-[250px] sm:hidden  border-[1px] ${showSidebar ? "left-0" : "left-[-250px]"} shadow-md  rounded-md p-[10px] bg-white top-0 bottom-0 absolute sm:static`}>
-          <Sidebar />
-         
+        <div className=' top-0 left-0 right-0'>
+          <Header />
         </div>
+        <Outlet />
+      </div>
+      <div
+        className={`max-w-[250px]  duration-500 min-w-[250px] sm:hidden  border-[1px] ${showSidebar ? "left-0" : "left-[-250px]"} shadow-md  rounded-md p-[10px] bg-white top-0 bottom-0 absolute sm:static`}>
+        <Sidebar />
+      </div>
     </div>
   )
 }
