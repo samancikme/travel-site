@@ -18,7 +18,7 @@ const MainLayout = () => {
   }, [])
   return (
     <div className=' h-[100vh ] relative font-mont'>
-      <div className=' bg-cover bg-center'>
+      <div className=' bg-centerbg-cover '>
         <div className=' top-0 left-0 right-0'>
           <Header />
         </div>
