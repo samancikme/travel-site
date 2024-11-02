@@ -29,6 +29,7 @@ const Home = () => {
               <button
                 type="submit"
                 className='px-8 py-2 right-[10px] top-[8px] bottom-[8px] bg-blue-500 rounded-full absolute cursor-pointer'>Search</button>
+
             </form>
             <div className='mt-7 w-full flex justify-between items-center'>
               <h2 className="text-[24px]">Top Categories</h2>
@@ -52,6 +53,8 @@ const Home = () => {
       <Container></Container>
     </div>
   )
+
+  
 }
 
 export default Home
