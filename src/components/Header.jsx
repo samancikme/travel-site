@@ -23,7 +23,7 @@ const Header = () => {
   console.log(langData)
 
   return (
-    <div className='flex    items-center h-[100px] border-[1px] justify-between shadow-md rounded-md p-[10px]  gap-1 bg-gray-700 border-gray-600'> 
+    <div className='flex items-center h-[100px] border-[1px] justify-between shadow-md rounded-md p-[10px] gap-1 bg-gray-700 border-gray-600'>
       <Container className='flex justify-between items-center'>
         <div className='bg-transparent text-[24px] text-white'>
           TRXL
@@ -32,7 +32,7 @@ const Header = () => {
         <div className='sm:flex hidden justify-end items-center gap-[10px] '>
           <ul className="flex justify-between items-center gap-[10px] text-white ">
             <li className="text-[18px] font-semibold hover:text-gray-300 ">
-              <NavLink  to={"/"}>
+              <NavLink to={"/"}>
                 Home
               </NavLink>
             </li>
@@ -51,18 +51,18 @@ const Header = () => {
           </ul>
         </div>
         <div className=' relative flex justify-between gap-2 text-white'>
-        <div>
-             <div className='flex justify-between items-center gap-2'>
-             <Button >
+          <div>
+            <div className='flex justify-between items-center gap-2'>
+              <Button >
                 Sign Up
               </Button>
-
-              <Button>Log in</Button>
-             </div>
-
+              <Button>
+                Log in
+              </Button>
             </div>
-           <div>
-           <button onClick={() => dispatch(toggleLang())} className='py-[5px] flex justify-center items-center gap-1 px-[5px] rounded-md  border-[1px]  active:scale-95 text-[16px] font-semibold'>
+          </div>
+          <div>
+            <button onClick={() => dispatch(toggleLang())} className='py-[5px] flex justify-center items-center gap-1 px-[5px] rounded-md  border-[1px]  active:scale-95 text-[16px] font-semibold'>
               <img className='w-[20px] h-[20px] object-contain  ' src={selectLang.img} alt="" />
               <span>{selectLang.title}</span>
             </button>
@@ -74,15 +74,7 @@ const Header = () => {
                 </button>
               ))}
             </div>
-           </div>
-            
           </div>
-
-        <div>
-
-          
-
-
         </div>
       </Container>
     </div>
