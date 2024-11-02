@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Button = ({children, addStyle,className}) => {
+const Button = ({children,icon, addStyle}) => {
   return (
-    <button  className={` cursor-pointer ${addStyle}  text-[20px] active:scale-95 flex justify-center items-center`}>
+    <button  className={` cursor-pointer ${addStyle}  text-[20px] py-2 px-3 border-gray-500 active:scale-95 flex justify-center items-center`}>
       {children}
     </button>
   )

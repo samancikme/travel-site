@@ -6,7 +6,7 @@
 
 
 .active {
-    @apply text-black underline;
+    @apply text-orange-600 underline;
 }
 
 
