@@ -41,7 +41,7 @@ const Home = () => {
         <div className="mt-3 w-full ">
           <h1 className="text-center text-[34px]  font-semibold py-4 text-orange-500">Top Vocation Destinations</h1>
           <div className='grid  w-full   sm:grid-cols-[repeat(auto-fill,minmax(450px,1fr))] gap-[10px] justify-center'>
-           {destinations?.slice(0,3).map(item => (
+           {destinations.destinations?.slice(0,3).map(item => (
               <DestCard className={""} item={item} key={item.id}/>
            ))}
         </div>

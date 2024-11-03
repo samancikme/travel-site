@@ -11,6 +11,7 @@ import { Link } from "react-router-dom";
 
 const Destination = () => {
   const {destinations,isDestLoad} = useSelector(state =>state.destinationSlice)
+  console.log(destinations)
     return (
      <div className="mt-2">
         <Container>
@@ -35,7 +36,7 @@ const Destination = () => {
         <div className="mt-3 ">
           <h1 className="text-center text-[34px] font-semibold py-4 text-orange-500">All Destinations</h1>
           <div className='grid grid-cols-[repeat(auto-fill,minmax(450px,1fr))] gap-[10px] '>
-           {destinations.map(item => (
+           {destinations.destinations?.map(item => (
               <DestCard item={item} key={item.id}/>
            ))}
         </div>

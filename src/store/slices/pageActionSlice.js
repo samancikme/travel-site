@@ -4,7 +4,8 @@ import { createSlice } from "@reduxjs/toolkit"
 const initialState = {
     showSidebar: false,
     showLang: false,
-    selectedLang: "ENG"
+    selectedLang: "ENG",
+    selectedDest:null
 }
 
 
@@ -21,13 +22,16 @@ const pageActionSlice = createSlice(
             },
             setSelectLang: (state, action) => {
                 state.selectedLang = action.payload
+            },
+            setSelectedDest: (state, action) => {
+                state.selectedDest = action.payload
             }
         }
     }
 )
 
 
-export const { toggleSidebar, toggleLang, setSelectLang } = pageActionSlice.actions
+export const { toggleSidebar, toggleLang, setSelectLang,setSelectedDest } = pageActionSlice.actions
 
 
 export default pageActionSlice.reducer
