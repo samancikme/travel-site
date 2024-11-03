@@ -47,10 +47,11 @@ const Home = () => {
               </div>
             </div>
           </div>
-
         </Container>
       </div>
-      <Container></Container>
+      <Container>
+
+      </Container>
     </div>
   )
 
