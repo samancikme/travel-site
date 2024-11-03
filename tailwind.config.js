@@ -8,6 +8,7 @@ export default {
     extend: {
       backgroundImage: {
         'backgroundImage': "url('./src/img/image 1.png')",
+        
       },
       fontFamily : {
         'mont' : '"Montserrat", sans-serif'
