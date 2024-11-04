@@ -19,15 +19,19 @@ const Tours = () => {
           {
             selectedDest ?
               <div>
-                <div>
+                <div className='grid grid-cols-[repeat(auto-fill,minmax(450px,1fr))] gap-[10px] '>
                   {tours.filter(tour => tour.destinationId === selectedDest).map(item => (
                     <TourCard item={item} key={item.id} />
                   ))}
                 </div>
-                <div>
-                  <button onClick={()=>{
-                    dispatch(setSelectedDest(null))
-                  }} className=''>View All Detail</button>
+                <div className='flex justify-center'>
+                  <button
+                    onClick={() => {
+                      dispatch(setSelectedDest(null))
+                    }}
+                    className='mt-5 py-2 duration-500 font-medium text-[14px] active:scale-95 px-5 hover:bg-gray-300 rounded-lg'>
+                    View All Tours
+                  </button>
                 </div>
               </div>
               :

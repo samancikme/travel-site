@@ -5,6 +5,7 @@ import Tours from './pages/Tours'
 import Destination from './pages/Destination'
 import NotFount from './components/pageComp/NotFount'
 import Home from './pages/Home'
+import TourDetail from './components/TourDetail'
 
 const App = () => {
   const router = createBrowserRouter(
@@ -13,6 +14,7 @@ const App = () => {
         <Route index element={<Home/>}/>
         <Route path='/tours' element={<Tours/>}/>
         <Route path='/destination' element={<Destination/>}/>
+        <Route path='/tours/:slug' element={<TourDetail/>}/>
         <Route path='/*' element={<NotFount/>}/>
 
 

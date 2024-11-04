@@ -4,13 +4,13 @@ import { setSelectedDest } from '../../store/slices/pageActionSlice';
 import { useNavigate } from 'react-router-dom';
 
 const DestCard = ({ item, className }) => {
-  const navigate= useNavigate()
-const dispatch = useDispatch()
+  const navigate = useNavigate()
+  const dispatch = useDispatch()
   return (
     <div className={`p-[10px] rounded-md shadow-md border-[1px] h-full flex flex-col justify-between gap-2 group relative overflow-hidden ${className}`}>
       <div className="relative overflow-hidden rounded-md">
         <img
-          className="h-[400px]  w-full  object-cover rounded-md shadow-md transform group-hover:scale-95 transition duration-300"
+          className="h-[400px] max-lg:h-full  w-full  object-cover rounded-md shadow-md transform group-hover:scale-95 transition duration-300"
           src={item.image}
           alt={item.name}
         />
@@ -20,15 +20,16 @@ const dispatch = useDispatch()
         <h2 className="text-lg font-semibold">{item.name}</h2>
         <p className='text-lg font-semibold'>{item.country}</p>
 
-       
+
         <p className="text-sm mt-1 line-clamp-2">{item.description}</p>
 
-        
 
-        
-        <button onClick={()=>{
+
+
+        <button onClick={() => {
           navigate("/tours")
-          dispatch(setSelectedDest(item.id))}} className="mt-3  px-4 py-2 bg-orange-500 text-white font-semibold rounded-md hover:bg-orange-600 transition duration-300">
+          dispatch(setSelectedDest(item.id))
+        }} className="mt-3  px-4 py-2 bg-orange-500 text-white font-semibold rounded-md hover:bg-orange-600 transition duration-300">
           Read More
         </button>
       </div>
