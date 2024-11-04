@@ -1,3 +1,4 @@
+import { BsArrowRight } from "react-icons/bs"; 
 import React from 'react'
 import Container from '../components/pageComp/Container'
 import DestCard from "../components/pageComp/DestCard";
@@ -32,6 +33,7 @@ const Home = () => {
         </Container>
       </div>
       <Container>
+<<<<<<< HEAD
         {isDestLoad ?
           <div>
             <Loading />
@@ -49,6 +51,25 @@ const Home = () => {
         }
         <div className="text-center justify-center items-center flex mt-3">
           <Link to={"/destination"}> <Button children={"More..."} addStyle={"border-[1px] border-orange-500 rounded-full py-2 px-6 text-orange-500 "} /></Link>
+=======
+      {isDestLoad? 
+        <div>
+           <Loading/>
+        </div> 
+        :
+        <div className="mt-3 w-full ">
+          <h1 className="text-center text-[34px]  font-semibold py-4 text-orange-500">Top Vocation Destinations</h1>
+          <div className='grid  w-full   sm:grid-cols-[repeat(auto-fill,minmax(450px,1fr))] gap-[10px] justify-center'>
+           {destinations.destinations?.slice(0,3).map(item => (
+              <DestCard className={""} item={item} key={item.id}/>
+           ))}
+        </div>
+       
+        </div>
+        }
+        <div className="text-center justify-center items-center flex mt-3">
+         <Link to={"/destination"}> <Button icon={BsArrowRight } children={"More..."} addStyle={"border-[1px] border-orange-500 rounded-full py-2 px-6 text-orange-500 "} /></Link>
+>>>>>>> 5efd98b09fdd2a49f791560ea7545cbba9fdaecf
         </div>
 
         <div className="mt-7 flex-col sm:flex-row text-center sm:text-start gap-2 sm:flex justify-center items-center ">
