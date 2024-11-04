@@ -22,7 +22,11 @@ const Destination = () => {
                   <Link to={"/tours"} className='flex justify-center md:justify-start  relative text-orange-500'><Button children={"View All Tours"} addStyle={"rounded-md border-[1px]  border-orange-600"} /> </Link >
                </div>
                <div className='flex-1 p-4'>
-                  <img className="rounded-md h-full " src={videoImg} alt="" />
+                  {/* <img className="rounded-md h-full " src={videoImg} alt="" /> */}
+                  <video className="rounded-md w-full h-full" autoPlay loop muted playsInline>
+                     <source src="https://cdn.pixabay.com/video/2023/10/22/186115-877653483_large.mp4" type="video/mp4" />
+                     <img src={videoImg} alt="Video preview" className="rounded-md w-full h-full" />
+                  </video>
                </div>
             </div>
             {isDestLoad ?
