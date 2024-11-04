@@ -1,3 +1,4 @@
+import { BsArrowRight } from "react-icons/bs"; 
 import React from 'react'
 import Container from '../components/pageComp/Container'
 import DestCard from "../components/pageComp/DestCard";
@@ -49,7 +50,7 @@ const Home = () => {
         </div>
         }
         <div className="text-center justify-center items-center flex mt-3">
-         <Link to={"/destination"}> <Button children={"More..."} addStyle={"border-[1px] border-orange-500 rounded-full py-2 px-6 text-orange-500 "} /></Link>
+         <Link to={"/destination"}> <Button icon={BsArrowRight } children={"More..."} addStyle={"border-[1px] border-orange-500 rounded-full py-2 px-6 text-orange-500 "} /></Link>
         </div>
 
         <div className="mt-7 flex-col sm:flex-row text-center sm:text-start gap-2 sm:flex justify-center items-center ">

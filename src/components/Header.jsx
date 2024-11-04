@@ -1,6 +1,6 @@
 import React from 'react'
 import Container from './pageComp/Container'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import Button from './pageComp/Button'
 import { setSelectLang, toggleLang, toggleSidebar } from '../store/slices/pageActionSlice'
 import { useDispatch, useSelector } from 'react-redux'
@@ -30,11 +30,11 @@ const Header = () => {
   return (
     <div className='flex items-center h-[80px] justify-between p-[10px] gap-1'>
       <Container className='flex justify-between items-center'>
-        <div className='bg-white text-[24px] text-black'>
+        <Link to={"/"} className='bg-white text-[24px] text-black'>
           TRXL
-        </div>
+        </Link>
         <div className=' justify-end items-center gap-[10px] '>
-          <div className="flex justify-between items-center gap-[10px] text-gray-600 md:flex hidden">
+          <div className="hidden justify-between items-center gap-[10px] text-gray-600 md:flex ">
             <NavLink
               className="text-[18px] font-semibold"
               to={"/"}>
@@ -78,7 +78,7 @@ const Header = () => {
             <div
               className={`absolute ${showLang ? "flex" : "hidden"} bottom-0 translate-y-[102%] w-[100px] right-[-20%] bg-white text-black p-[5px] border-[1px] rounded-md flex-col gap-1`}>
               {langData.map(item => (
-                <button onClick={() => handleLangChange(item.title)} key={item.id} className='py-[5px] flex justify-center items-center gap-1 px-[5px] rounded-md    active:scale-95 text-[16px] font-semibold'>
+                <button  onClick={() => handleLangChange(item.title)} key={item.id} className='py-[5px]  flex justify-center items-center gap-1 px-[5px] rounded-md    active:scale-95 text-[16px] font-semibold'>
                   <img
                     className='w-[20px] h-[20px] object-contain '
                     src={item.img}

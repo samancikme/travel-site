@@ -3,7 +3,7 @@ import React from 'react'
 const TourCard = ({item,className}) => {
 
   return (
-    <div className={`p-[10px] rounded-md shadow-md border-[1px] h-full flex flex-col justify-between gap-2 group relative overflow-hidden ${className}`}>
+    <div className={`p-[10px] rounded-md shadow-md border-[1px]  h-full flex flex-col justify-between gap-2 group relative overflow-hidden ${className}`}>
       <div className="relative overflow-hidden rounded-md">
         <img
           className="h-[400px]  w-full  object-cover rounded-md shadow-md transform group-hover:scale-95 transition duration-300"
