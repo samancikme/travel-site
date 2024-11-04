@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react'
 
-const DestCard = ({ item, className }) => {
+const TourCard = ({item,className}) => {
   return (
     <div className={`p-[10px] rounded-md shadow-md border-[1px] h-full flex flex-col justify-between gap-2 group relative overflow-hidden ${className}`}>
       <div className="relative overflow-hidden rounded-md">
         <img
           className="h-[400px]  w-full  object-cover rounded-md shadow-md transform group-hover:scale-95 transition duration-300"
-          src={item.image}
+          src={item.images}
           alt={item.name}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-60 transition-opacity duration-300"></div>
@@ -24,7 +24,7 @@ const DestCard = ({ item, className }) => {
             <span key={index} className="text-gray-400">★</span>
           ))}
         </div> */}
-        <p className="text-sm mt-1 line-clamp-2">{item.description}</p>
+        
 
         {/* Price */}
         <div className="mt-2 font-semibold">
@@ -39,5 +39,7 @@ const DestCard = ({ item, className }) => {
     </div>
   );
 };
+  
 
-export default DestCard;
+
+export default TourCard

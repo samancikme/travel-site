@@ -6,7 +6,7 @@ const ButtonIcons = ({ icon, children }) => {
       <div className='text-[24px]'>
         {icon()}
       </div>
-      <div className='text-[16px]'>
+      <div className='text-[18px]'>
         {children}
       </div>
     </div>

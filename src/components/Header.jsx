@@ -2,14 +2,16 @@ import React from 'react'
 import Container from './pageComp/Container'
 import { NavLink } from 'react-router-dom'
 import Button from './pageComp/Button'
-import { setSelectLang, toggleLang } from '../store/slices/pageActionSlice'
+import { setSelectLang, toggleLang, toggleSidebar } from '../store/slices/pageActionSlice'
 import { useDispatch, useSelector } from 'react-redux'
 import { useTranslation } from 'react-i18next'
 import { langData } from '../config/const'
+import { IoIosArrowForward } from 'react-icons/io'
 
 const Header = () => {
   const { showLang, selectedLang } = useSelector(state => state.pageActionSlice)
   const dispatch = useDispatch()
+  const { showSidebar} = useSelector(state => state.pageActionSlice)
   const { t, i18n } = useTranslation()
   function handleLangChange(lang) {
     dispatch(toggleLang())
@@ -31,30 +33,30 @@ const Header = () => {
         <div className='bg-white text-[24px] text-black'>
           TRXL
         </div>
-        <div className='sm:flex hidden justify-end items-center gap-[10px] '>
-          <div className="flex justify-between items-center gap-[10px] text-gray-600 ">
+        <div className=' justify-end items-center gap-[10px] '>
+          <div className="flex justify-between items-center gap-[10px] text-gray-600 md:flex hidden">
             <NavLink
               className="text-[18px] font-semibold"
               to={"/"}>
               Home
             </NavLink>
 
-            <NavLink
-              className="text-[18px] font-semibold"
+            <NavLink 
+              className="text-[18px] font-semibold "
               to={"/destination"}>
               Destination
             </NavLink>
 
             <NavLink
-              className="text-[18px] font-semibold"
+              className="text-[18px] font-semibold "
               to={"/tours"}>
               Tours
             </NavLink>
           </div>
         </div>
-        <div className='relative flex justify-between items-center gap-2 text-black'>
+        <div className='relative flex justify-between items-center gap-2 font-bold text-gray-700'>
           <div>
-            <div className='flex justify-between items-center gap-2'>
+            <div className=' justify-between items-center gap-2 md:flex hidden'>
               <Button >
                 Sign Up
               </Button>
@@ -63,7 +65,7 @@ const Header = () => {
               </Button>
             </div>
           </div>
-          <div>
+          <div >
             <button
               onClick={() => dispatch(toggleLang())}
               className='py-[5px] flex justify-center items-center gap-1 px-[5px] rounded-md  border-[1px]  active:scale-95 text-[16px] font-semibold'>
@@ -85,7 +87,19 @@ const Header = () => {
                 </button>
               ))}
             </div>
+           
           </div>
+          <button onClick={() => {
+            dispatch(toggleSidebar()) 
+            if(showSidebar){
+              dispatch(toggleSidebar())
+            }
+          }} className={` ${showSidebar? "opacity-100" : "opacity-50"} w-[30px] h-[40px] rounded-sm bg-orange-500 hover:bg-orange-600 text-white flex justify-center items-center shadow-sm active:scale-95 text-[20px]  sm:hidden  `} >
+           <span className={` ${showSidebar? "rotate-180" : "rotate-0"} duration-500`}>
+           <IoIosArrowForward/>
+           </span>
+           </button>
+          
         </div>
       </Container>
     </div>

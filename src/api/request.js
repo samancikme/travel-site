@@ -22,8 +22,10 @@ export const getAllTourData = (url) => {
        try{
         const res = await axios.get(url) 
         dispatch(fetchedTourData(res.data))
+        console.log(res)
        }catch(err) {
         dispatch(fetchedTourDataErr(err.message))
+        
        }
     }
 }
