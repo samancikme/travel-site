@@ -32,7 +32,7 @@ const MainLayout = () => {
         <Outlet />
       </div>
       <div
-        className={`max-w-[250px]  duration-500 min-w-[250px] md:hidden h-full sticky border-[1px] ${showSidebar ? "left-0" : "left-[-250px]"} shadow-md  rounded-md p-[10px] bg-white top-0 bottom-0 `}>
+        className={`max-w-[250px] duration-500 min-w-[250px] md:hidden h-full sticky border-[1px] ${showSidebar ? "" : "hidden"} shadow-md  rounded-md p-[10px] bg-white top-0 bottom-0`}>
         <Sidebar />
       </div>
       <Footer/>

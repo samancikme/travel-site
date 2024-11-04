@@ -13,14 +13,11 @@ const Sidebar = () => {
   const dispatch = useDispatch()
   const { t } = useTranslation()
   return (
-    <div onClick={
-    (e)=>{
-      e.stopPropagation()
-    }
+    <div onClick={e => e.stopPropagation()
     } className={`md:hidden `}>
       <div className='flex justify-center items-center gap-1 text-[18px] font-bold text-gray-900 mt-[10px]'>
         <GiAirplaneDeparture className="w-[30px] h-[30px] text-orange-600 " />
-         <span className="text-orange-600">Trxl</span>
+        <span className="text-orange-600">Trxl</span>
       </div>
       <hr className="mt-[10px] " />
       <div className="mt-[10px] flex flex-col gap-2 ">
